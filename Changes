@@ -1,0 +1,8 @@
+Revision history for Perl extension QtCore.
+
+4.000 Tue Nov 5 2007 Vadim Likhota <vadim-lvv@yandex.ru>
+	- full test version
+
+0.001 Wed Jul 11 2007
+	- original version; created by h2xs 1.23 with options
+
