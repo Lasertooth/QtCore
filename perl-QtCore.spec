@@ -36,6 +36,7 @@ make %{?_smp_mflags} OPTIMIZE="$RPM_OPT_FLAGS"
 rm -rf $RPM_BUILD_ROOT
 make pure_install PERL_INSTALL_ROOT=$RPM_BUILD_ROOT
 chmod -R u+w $RPM_BUILD_ROOT/*
+rm -rf $RPM_BUILD_ROOT/usr/share/man/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
