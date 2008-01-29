@@ -4,7 +4,7 @@
 
 Summary: 	perl/Qt4 libraries
 Name: 		perl-QtCore
-Version: 	4.001
+Version: 	4.003
 Release: 	0%{?dist}
 
 Group: 		User Interface/Development
@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Mon Jan 28 2008 Vadim Likhota <vadim-lvv@yandex.ru> 4.001
+* Mon Jan 28 2008 Vadim Likhota <vadim-lvv@yandex.ru> 4.003
 - update ver
 
 * Tue Nov 5 2007 Vadim Likhota <vadim-lvv@yandex.ru> 4.000

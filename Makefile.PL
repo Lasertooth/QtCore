@@ -2,12 +2,30 @@ use 5.008;
 use ExtUtils::MakeMaker;
 use File::Copy;
 
-our $prefix = '/usr/include';
+our $prefix;
 our $pkgs = 'QtCore';
 my $QtCore_path = '../QtCore';
 
 my %args = @ARGV;
-$prefix = $args{-i} if defined $args{-i};
+if ( defined $args{-i} ) {
+    $prefix = $args{-i} 
+}
+
+if ( $prefix and open FF, $prefix."/QtCore/qglobal.h" ) {
+    # ok
+}
+elsif ( open FF, "/usr/local/include/QtCore/qglobal.h" ) {
+    $prefix = '/usr/local/include';
+}
+elsif ( open FF, "/usr/include/QtCore/qglobal.h" ) {
+    $prefix = '/usr/include';
+}
+else {
+    die "Error: can not found Qt4 headers\n";
+}
+close FF;
+    
+
 if ( defined $args{-qc} ) {
     print $args{-qc};
     $QtCore_path = $arcs{-qc};

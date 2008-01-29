@@ -8,10 +8,10 @@ require Exporter;
 require DynaLoader;
 
 our @ISA = qw(DynaLoader Exporter);
-our $VERSION = '4.002';
+our $VERSION = '4.003';
 
-our @EXPORT = qw(qref);
-our @EXPORT_OK = @EXPORT;
+#our @EXPORT = qw(qref);
+#our @EXPORT_OK = @EXPORT;
 
 
 # find in Win32::Gui  :)
