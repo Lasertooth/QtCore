@@ -5,8 +5,9 @@
 
 # change 'tests => 1' to 'tests => last_test_to_print';
 
+use blib;
 use Test::More tests => 1;
-BEGIN { use_ok('QtCore') };
+BEGIN { use_ok('Qt') };
 
 #########################
 

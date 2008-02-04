@@ -4,7 +4,8 @@ use File::Copy;
 
 our $prefix;
 our $pkgs = 'QtCore';
-my $QtCore_path = '../QtCore';
+my $QtCore_path; #  = '../QtCore';
+my $vv = '4.003';
 
 my %args = @ARGV;
 if ( defined $args{-i} ) {
@@ -24,12 +25,12 @@ else {
     die "Error: can not found Qt4 headers\n";
 }
 close FF;
-    
 
 if ( defined $args{-qc} ) {
     print $args{-qc};
     $QtCore_path = $arcs{-qc};
 }
+
 
 
 my @tpms = ('perlobject.map');

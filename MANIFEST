@@ -26,8 +26,5 @@ perl-QtCore.spec
 QtCore.xs
 README
 README.rus
-t/01_QtCore.t
-t/05_QSize.t
-t/10_QString.t
-t/15_QCoreApplication_QTimer.t
+t/Qt.t
 TODO

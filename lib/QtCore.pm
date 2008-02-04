@@ -8,7 +8,7 @@ require Exporter;
 require DynaLoader;
 
 our @ISA = qw(DynaLoader Exporter);
-our $VERSION = '4.003';
+our $VERSION = '4.004';
 
 #our @EXPORT = qw(qref);
 #our @EXPORT_OK = @EXPORT;
@@ -33,21 +33,21 @@ bootstrap QtCore $VERSION;
 
 # Preloaded methods go here.
 
-sub qref {
-    my $q = shift;
-    return "" unless ref($q);
-    my $r = ref($q);
-    if ( $r eq 'SCALAR' ) {
-	return 'S';}
-    elsif ( $r eq 'ARRAY' ) {
-	return 'A';}
-    elsif ( $r eq 'HASH' ) {
-	return 'H';}
-    elsif ( $r eq 'REF' ) {
-	return 'R';}
-    else {
-	return "O"; }
-}
+#sub qref {
+#    my $q = shift;
+#    return "" unless ref($q);
+#    my $r = ref($q);
+#    if ( $r eq 'SCALAR' ) {
+#	return 'S';}
+#    elsif ( $r eq 'ARRAY' ) {
+#	return 'A';}
+#    elsif ( $r eq 'HASH' ) {
+#	return 'H';}
+#    elsif ( $r eq 'REF' ) {
+#	return 'R';}
+#    else {
+#	return "O"; }
+#}
 
 1;
 
